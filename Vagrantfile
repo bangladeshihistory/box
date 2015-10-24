@@ -1,4 +1,22 @@
 Vagrant::Config.run do |config|
+
+  ## SSH Configuration
+  config.ssh.username = 'sajjad'
+  config.ssh.private_key_path = '~/.ssh/id_rsa'
+
+  # Global Configuration
+  config.vm.provider :linode do |provider, override|
+    override.vm.box = 'linode'
+    override.vm.box_url = "https://github.com/displague/vagrant-linode/raw/master/box/linode.box"
+    provider.token = 'API-KEY'
+
+       #Linode Settings
+        provider.distribution = 'Ubuntu 14.04 LTS'
+        provider.datacenter = 'newark'
+        provider.plan = '1024'
+        provider.label = 'vagrant-ubuntu-lts'
+  end
+
   config.vm.box = "precise32"
   
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
