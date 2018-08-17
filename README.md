@@ -1,3 +1,20 @@
+# Terra
+
+```markdown
+ter·ra
+/ˈterə/
+  noun
+  1. land or territory.
+  2. (in science fiction) the planet earth.
+```
+
+## Abstract
+
+### What is it
+### How does it work
+### What are the benefits
+### Getting started
+
 <!-- This is a Vagrant file and set of Chef recipes for building a basic node development environment.
 If you're not familiar with Vagrant, read more about it at http://www.vagrantup.com.
 
