@@ -15,6 +15,18 @@ ter·ra
 ### What are the benefits
 ### Getting started
 
+1. clone the project
+
+### Working in the VirtualBox
+
+1. vagrant up
+2. vagrant ssh
+3. cd /var/www/metaterran
+4.
+
+### Updating the VirtualBox
+
+
 <!-- This is a Vagrant file and set of Chef recipes for building a basic node development environment.
 If you're not familiar with Vagrant, read more about it at http://www.vagrantup.com.
 

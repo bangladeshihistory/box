@@ -8,7 +8,8 @@ echo "+------------------------+"
 echo "|    Installing Nginx    |"
 echo "+------------------------+"
 sudo apt-get install -y nginx
-sudo cp /vagrant/formulas/default /etc/nginx/sites-available/default
+sudo cp /vagrant/formulas/metaterran /etc/nginx/sites-available/metaterran
+sudo cp /vagrant/formulas/test /etc/nginx/sites-available/test
 
 echo "+------------------------+"
 echo "|   Installing NodeJS    |"
