@@ -29,12 +29,5 @@ Then we create a `VagrantFile` that copies over our `/public` directory to our s
 1. **Continuous Delivery**: Vagrant maintains a development environment, as well as pushed and manages our code!
 2. **Continuous Integration**: CircleCI lets us use some really neat WebHooks that run a build and test in our Vagrant, every time we push to master.
 3. **Great structure for a tested React App**: Using CypressIO, JEST and Gatsby, we piece together a test SPA portfolio, in BDD fashion.
-4. **Some shell scripts included**: I put together a bash_profile for our vagrant user, that is built to optimize your Gatsby, Linux experience.
 
-### Install Dependencies
-
-See [dependencies](./wiki/Dependencies).
-
-### Getting Started
-
-See [getting started](./wiki/Getting-Started).
+### See [Wiki](https://github.com/sajjadhossain/terra/wiki)
