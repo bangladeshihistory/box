@@ -33,8 +33,8 @@ Then we create a `VagrantFile` that copies over our `/public` directory to our s
 
 ### Install Dependencies
 
-See [dependencies](./Dependencies).
+See [dependencies](./wiki/Dependencies).
 
 ### Getting Started
 
-See [getting started](./Getting-Started).
+See [getting started](./wiki/Getting-Started).
