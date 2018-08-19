@@ -1,7 +1,13 @@
 echo "+------------------------+"
+echo "|       Get Updates      |"
+echo "+------------------------+"
+sudo apt-get update
+
+echo "+------------------------+"
 echo "|     Installing Git     |"
 echo "+------------------------+"
 sudo apt-get update
+sudo do-release-upgrade
 sudo apt-get install git
 
 echo "+------------------------+"
@@ -10,6 +16,11 @@ echo "+------------------------+"
 sudo apt-get install -y nginx
 sudo cp /vagrant/formulas/metaterran /etc/nginx/sites-available/metaterran
 sudo cp /vagrant/formulas/test /etc/nginx/sites-available/test
+sudo cp /vagrant/formulas/nginx.conf.terra /etc/nginx/nginx.conf
+sudo sudo ln -s /etc/nginx/sites-available/test /etc/nginx/sites-enabled/test
+sudo sudo ln -s /etc/nginx/sites-available/metaterran /etc/nginx/sites-enabled/metaterran
+sudo rm -rf /etc/nginx/sites-available/default
+sudo rm -rf /etc/nginx/sites-enabled/default
 
 echo "+------------------------+"
 echo "|   Installing NodeJS    |"

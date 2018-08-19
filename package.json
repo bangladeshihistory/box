@@ -1,0 +1,19 @@
+{
+  "name": "terra",
+  "version": "1.0.0",
+  "description": "```markdown ter·ra /ˈterə/   noun   1. land or territory.   2. (in science fiction) the planet earth. ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajjadhossain/terra.git"
+  },
+  "author": "sajjad hossain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sajjadhossain/terra/issues"
+  },
+  "homepage": "https://github.com/sajjadhossain/terra#readme"
+}

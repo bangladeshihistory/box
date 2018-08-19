@@ -21,10 +21,10 @@ ter·ra
 
 1. vagrant up
 2. vagrant ssh
-3. cd /var/www/metaterran
-4.
+3. cd /var/www/test/server
+4. node server.js
 
-### Updating the VirtualBox
+### Updating the VirtualBox files
 
 
 <!-- This is a Vagrant file and set of Chef recipes for building a basic node development environment.

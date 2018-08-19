@@ -4,7 +4,10 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.network "private_network", ip: "192.168.56.95"
   config.vm.network "forwarded_port", guest: 8000, host: 8000
-  config.vm.synced_folder "./box/metaterran", "/metaterran"
+  config.vm.network "forwarded_port", guest: 4570, host: 4570
+  config.vm.synced_folder "./", "/vagrant"
+  config.vm.synced_folder "./box/metaterran/public", "/var/www/metaterran"
+  config.vm.synced_folder "./box/test", "/var/www/test"
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "1024"
   end
