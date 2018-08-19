@@ -1,10 +1,15 @@
 {
   "name": "terra",
   "version": "1.0.0",
-  "description": "```markdown ter·ra /ˈterə/   noun   1. land or territory.   2. (in science fiction) the planet earth. ```",
+  "description": "This project will serve as a Vagrant box for my portfolio, a GatsbyJS blog, to be hosted on a Linode, orchestrated pipeline with Vagrant and CircleCI. Tested with CypressIO and Jest BDD.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/cypress run --headed",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "destroy-vm": "vagrant destroy",
+    "ssh-vm": "vagrant ssh",
+    "boot-vm": "vagrant up"
   },
   "repository": {
     "type": "git",

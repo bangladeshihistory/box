@@ -10,79 +10,31 @@ ter·ra
 
 ## Abstract
 
+This project will serve as a Vagrant box for my portfolio, a GatsbyJS blog, to be hosted on a Linode, orchestrated pipeline with Vagrant and CircleCI. Tested with CypressIO and Jest BDD.
+
 ### What is it
+
+In a nutshell, it is a VagrantFile, in addition, a shell script and an Ngnix configuration. It's a box that can be used to automate deployments to ANY environment. It is currently provisioned to deploy to a Linode (Nanode) box.
+
+Gatsby offers other deployment options, none of them really work quite like Vagrant for me.
+
 ### How does it work
+
+Our first step was to create an application using `gatsbyJS`. we use `gatsby build` to give us a static HTML directory, bundled with SPA-magic.
+
+Then we create a `VagrantFile` that copies over our `/public` directory to our serving directory for our HTML. We use a regular `ubuntu/trusty64` box. After that we provision the box with `node` and `nginx`. After providing some `Linode API` keys, we create a `Nanode` in the Linode cloud!
+
 ### What are the benefits
-### Getting started
 
-1. clone the project
+1. **Continuous Delivery**: Vagrant maintains a development environment, as well as pushed and manages our code!
+2. **Continuous Integration**: CircleCI lets us use some really neat WebHooks that run a build and test in our Vagrant, every time we push to master.
+3. **Great structure for a tested React App**: Using CypressIO, JEST and Gatsby, we piece together a test SPA portfolio, in BDD fashion.
+4. **Some shell scripts included**: I put together a bash_profile for our vagrant user, that is built to optimize your Gatsby, Linux experience.
 
-### Working in the VirtualBox
+### Install Dependencies
 
-1. vagrant up
-2. vagrant ssh
-3. cd /var/www/test/server
-4. node server.js
+See [dependencies](./Dependencies).
 
-### Updating the VirtualBox files
+### Getting Started
 
-
-<!-- This is a Vagrant file and set of Chef recipes for building a basic node development environment.
-If you're not familiar with Vagrant, read more about it at http://www.vagrantup.com.
-
-To get this to work, you must have VirtualBox (> 4.1.0) and Vagrant (> 1.0) installed.
-I've most recently been testing it with VirtualBox 4.2.10 and Vagrant 1.1.0. Please post an
-issue if you're having problems with other versions, and I'll see if I can track it down.
-
-
-Installers for VirtualBox are available at http://www.virtualbox.org, and installers for
-Vagrant are available at http://www.vagrantup.com.
-
-Once you have the pre-requisites installed, you should be able to clone this repository
-
-    git clone https://github.com/semmypurewal/node-dev-bootstrap.git my_project
-
-and change to your new project directory to start your VM:
-
-    cd my_project
-    vagrant up
-
-Note that the Vagrantfile will download and install the precise32 vagrant box if you don't
-already have it.
-
-After a few minutes, you should have a virtual dev environment with node, npm, mongodb and redis.
-The app folder is shared, and port 3000 on the VM is forwarded to port 3000 on the localhost. This
-is all customizable in the Vagrantfile.
-
-You can test out your environment by ssh'ing into your environment and running the sample script:
-
-    vagrant ssh
-    cd app
-    node server.js
-
-Next open localhost:3000 in your web browser. If everything worked correctly, you should see
-'Hello World'
-
-## Important note about Installing NPM Packages
-
-Later versions of VirtualBox do not support symlinks in shared folders. More info is available
-here: https://www.virtualbox.org/ticket/10085
-
-This can cause problems when you're attempting to install certain packages via npm. For
-example, the 'jade' and 'express' packages create symlinks during installation, and
-therefore the installation will fail in the shared 'app' directory.
-
-The best workaround for this is to install node packages in your shared folder with the
---no-bin-links flag, e.g.
-
-    npm install express --no-bin-links
-
-If VirtualBox is your provider and you're using MacOS, you may also want to try to uncomment
-the "setextradata" customization in the VagrantFile to allow symlinks to work.
-
-I'm not sure how this affects other Virtual Machine providers.
-
-
-
-
- -->
+See [getting started](./Getting-Started).
