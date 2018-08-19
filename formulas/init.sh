@@ -16,7 +16,7 @@ echo "+------------------------+"
 sudo apt-get install -y nginx
 sudo cp /vagrant/formulas/metaterran /etc/nginx/sites-available/metaterran
 sudo cp /vagrant/formulas/nginx.conf.terra /etc/nginx/nginx.conf
-sudo sudo ln -s /etc/nginx/sites-available/metaterran /etc/nginx/sites-enabled/metaterran
+sudo ln -s /etc/nginx/sites-available/metaterran /etc/nginx/sites-enabled/metaterran
 sudo rm -rf /etc/nginx/sites-available/default
 sudo rm -rf /etc/nginx/sites-enabled/default
 
