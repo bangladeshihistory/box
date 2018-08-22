@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/cypress run --headed",
+    "init": "cd box/metaterran && npm install",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "destroy-vm": "vagrant destroy",

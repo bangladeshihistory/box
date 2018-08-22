@@ -4,14 +4,16 @@
 
 See [dependencies](./Dependencies).
 
-## 3. Build the application
+## 2. Build the application
 
-`node run build`
+1. `git submodule init`
+2. `node run init`
+3. `node run build`
 
-## 2. Boot the virtual machine
+## 3. Boot the virtual machine
 
 `node run boot-vm`
 
-## 3. Visit locally hosted Gatsby Application
+## 4. Visit locally hosted Gatsby Application
 
 `open http://192.168.56.95`
