@@ -14,9 +14,9 @@ echo "+------------------------+"
 echo "|    Installing Nginx    |"
 echo "+------------------------+"
 sudo apt-get install -y nginx
-sudo cp /vagrant/formulas/metaterran /etc/nginx/sites-available/metaterran
+sudo cp /vagrant/formulas/tech.sajjad /etc/nginx/sites-available/tech.sajjad
 sudo cp /vagrant/formulas/nginx.conf.terra /etc/nginx/nginx.conf
-sudo ln -s /etc/nginx/sites-available/metaterran /etc/nginx/sites-enabled/metaterran
+sudo ln -s /etc/nginx/sites-available/tech.sajjad /etc/nginx/sites-enabled/tech.sajjad
 sudo rm -rf /etc/nginx/sites-available/default
 sudo rm -rf /etc/nginx/sites-enabled/default
 

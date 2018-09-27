@@ -1,0 +1,16 @@
+server {
+  listen 80;
+  root /var/www/tech.sajjad;
+
+  server_name tech.sajjad.nyc www.tech.sajjad.nyc;
+
+  index index.html;
+  autoindex off;
+  charset urtf-8;
+
+  error_page 404 /404;
+  
+  location / {
+    try_files $uri $uri/ =404;
+  }
+}
